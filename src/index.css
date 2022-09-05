@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: azure;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  /* margin-left: 80px; */
+}
+
+.title {
+  color: #333;
+  border-bottom: solid 2px rgba(0, 187, 255, 0.789);
+  display: inline-block;
+  padding: 16px;
+  font-size: 32px;
+  margin: 40px;
+  line-height: 16px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.addForm {
+  margin: 8px auto;
+  border: solid 1px #fff;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  height: 24px;
+  width: 100%;
+}
+
+.submitButton {
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgba(0, 98, 255, 0.846);
+  border: solid 1px rgba(0, 98, 255, 0.846);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.todo {
+  display: flex;
+  margin: 8px auto;
+  border: solid 1px #fff;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.todo li {
+  align-content: center;
+}
