@@ -19,25 +19,51 @@ const App = () => {
     setTodoId(todoId + 1)
     resetTodoTitle()
   }
+  
+//削除ボタン
+  const handleDeleteTodo = (targetTodo) => {
+    setTodos(todos.filter((todo) => todo.id !== targetTodo.id));
+  };
+
+//編集フォームの表示非表示
+const [isEditable, setIsEditable] = useState(false);
+
+const handleOpenEditForm = () => {
+  setIsEditable(true);
+};
+
+const handleCloseEditForm = () => {
+  setIsEditable(false);
+};
+
+const handleEditTodo = () => {
+  handleCloseEditForm();
+};
 
   return (
     <div>
-      <input
-        type="text"
-        label="タイトル"
-        value={todoTitle}
-        onChange={(e)=>handleSetTodoTitle}
-      />
+      {!isEditable ? (
+        <>
+          <input
+            type="text"
+            label="タイトル"
+            value={todoTitle}
+            onChange={(e)=>handleSetTodoTitle(e)}
+          />
+          <button onClick={()=>handleAddTodo()}>作成</button>
+        </>
+      ) : (
+        <EditForm />
+      )}
       
-      <button onClick={()=>handleAddTodo}>作成</button>
-      <EditForm />
       <ul>
         {todos.map((todo) => (
           <li key={todo.id}>
+            <span>ID:{todo.id}</span>
             <span>{todo.title}</span>
             <Filter />
-            <button>編集</button>
-            <button>削除</button>
+            <button onClick={() => handleOpenEditForm(todo)}>編集</button>
+            <button onClick={() => handleDeleteTodo(todo)}>削除</button>
           </li>
         ))}
       </ul>

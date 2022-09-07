@@ -16,3 +16,4 @@ const EditForm = ({newTitle, handleEditFormChanges, handleEditTodo, handleCloseE
 };
 
 export default EditForm;
+
